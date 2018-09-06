@@ -26,8 +26,8 @@ int main(int argc, char **argv) {
   int numWrong   = 0;
   int i;
 
-  for(i=-10; i<=100000; i++) {
-    if(contains(kaprekarNumbers, numKaprekarNumbers, i) == isKaprekar(i)) {
+  for(i=1; i<=100000; i++) {
+    if(contains(kaprekarNumbers, numKaprekarNumbers, i) != isKaprekar(i)) {
       numWrong++;
       if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
 	fprintf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
